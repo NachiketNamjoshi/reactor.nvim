@@ -1,13 +1,13 @@
 use std::collections::HashMap;
 pub mod colors;
 
-use nvim_oxi::{self as oxi, api, opts::*};
+use nvim_oxi::{self as oxi, api, Dictionary, Function, Object, opts::*};
 
 #[oxi::module]
-fn reactor() -> oxi::Result<()> {
+fn reactor() -> oxi::Result<Dictionary> {
     api::set_option("termguicolors", true)?;
     let reactor: HashMap<i32, String> = colors::get_colors();
-    let palette: HashMap<i32, String> = colors::get_palette();
+    let palette: HashMap<i32, String> = colors::get_palette_map();
     macro_rules! sethl {
         ($hlname: expr, $fgcol: expr, $bgcol: expr) => {
             api::set_hl(
@@ -236,6 +236,13 @@ fn reactor() -> oxi::Result<()> {
     sethl!(NvimTreeRootFolder, &255, &3);
     sethl!(NvimTreeExecFile, &34, &999);
 
+    let get_palette = Function::from_fn(move |()| -> oxi::Result<Vec<String>> {
+        let palette = colors::get_palette();
+        Ok(palette)
+    });
 
-    Ok(())
+
+    Ok(Dictionary::from_iter([
+        ("get_palette", Object::from(get_palette))
+    ]))
 }

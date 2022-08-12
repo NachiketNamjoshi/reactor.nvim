@@ -3,7 +3,7 @@ use std::num::ParseIntError;
 
 use palette::{Srgb, Lch, FromColor, Gradient};
 
-pub fn get_palette() -> HashMap<i32, String> {
+pub fn get_palette_map() -> HashMap<i32, String> {
     // Define a basic color palette
     let mut palette: HashMap<i32, String> = HashMap::new();
     palette.insert(0, String::from("#212121"));
@@ -25,8 +25,31 @@ pub fn get_palette() -> HashMap<i32, String> {
     return palette;
 }
 
+pub fn get_palette() -> Vec<String> {
+    let palette_map = get_palette_map();
+    let palette = vec![
+        palette_map.get(&0).unwrap().to_owned(),
+        palette_map.get(&1).unwrap().to_owned(),
+        palette_map.get(&2).unwrap().to_owned(),
+        palette_map.get(&3).unwrap().to_owned(),
+        palette_map.get(&4).unwrap().to_owned(),
+        palette_map.get(&5).unwrap().to_owned(),
+        palette_map.get(&6).unwrap().to_owned(),
+        palette_map.get(&7).unwrap().to_owned(),
+        palette_map.get(&8).unwrap().to_owned(),
+        palette_map.get(&9).unwrap().to_owned(),
+        palette_map.get(&10).unwrap().to_owned(),
+        palette_map.get(&11).unwrap().to_owned(),
+        palette_map.get(&12).unwrap().to_owned(),
+        palette_map.get(&13).unwrap().to_owned(),
+        palette_map.get(&14).unwrap().to_owned(),
+        palette_map.get(&15).unwrap().to_owned(),
+    ];
+    return palette;
+}
+
 pub fn get_colors() -> HashMap<i32, String> {
-    let palette = get_palette();
+    let palette = get_palette_map();
 
     // Generate 256 Color palette
     let gradient = Gradient::new(vec![
