@@ -211,5 +211,31 @@ fn reactor() -> oxi::Result<()> {
     sethl!(TSQueryLinterError, &154, &999);
     sethl!(TreesitterContext, &999, &136);
 
+
+    // Nvim Tree
+    sethl!(NvimTreeFolderIcon, &213, &999);
+    sethl!(NvimTreeIndentMarker, &250, &999);
+    sethl!(NvimTreeNormal, &250, &0);
+    sethl!(NvimTreeVertSplit, &2, &2);
+    sethl!(NvimTreeFolderName, &213, &999);
+    sethl!(NvimTreeOpenedFolderName, &213, &999, bold);
+    sethl!(NvimTreeEmptyFolderName, &249, &999, italic);
+    sethl!(NvimTreeGitIgnored, &249, &999, italic);
+    sethl!(NvimTreeImageFile, &250, &2);
+    sethl!(NvimTreeSpecialFile, &166, &999);
+    sethl!(NvimTreeEndOfBuffer, &136, &999);
+    sethl!(NvimTreeCursorLine, &999, &1);
+    sethl!(NvimTreeGitignoreIcon, &18, &3);
+    sethl!(NvimTreeGitStaged, &60, &999);
+    sethl!(NvimTreeGitNew, &60, &999);
+    sethl!(NvimTreeGitRenamed, &60, &999);
+    sethl!(NvimTreeGitDeleted, &152, &999);
+    sethl!(NvimTreeGitMerge, &186, &999);
+    sethl!(NvimTreeGitDirty, &186, &3);
+    sethl!(NvimTreeSymlink, &229, &3);
+    sethl!(NvimTreeRootFolder, &255, &3);
+    sethl!(NvimTreeExecFile, &34, &999);
+
+
     Ok(())
 }
