@@ -37,7 +37,7 @@ vim.cmd.colorscheme("reactor")
 You will need to require the `Lualine` theme from the `colors` in your `Lualine` config:
 
 ```lua
-local ok, reactor = pcall(require, 'colors.reactor')
+local ok, reactor = pcall(require, 'reactor_lualine')
 if ok then
   lualine_opts['theme'] = reactor.LualineTheme;
 else
