@@ -117,7 +117,7 @@ fn reactor() -> oxi::Result<()> {
     sethl!(Question, &173, &999);
     sethl!(EndOfBuffer, &999, &0);
     sethl!(NonText, &999, &0);
-    sethl!(Variable, &6, &999);
+    sethl!(Variable, &73, &999);
     sethl!(String, &60, &999);
     sethl!(Character, &60, &999, bold);
     sethl!(Constant, &73, &999);
@@ -154,5 +154,62 @@ fn reactor() -> oxi::Result<()> {
     sethl!(TabLine, &250, &2);
     sethl!(TabLineSel, &250, &2, bold);
     sethl!(TabLineFill, &249, &2);
+
+
+    // TreeSitter
+    sethl!(TSComment, &120, &999);
+    sethl!(TSAnnotation, &59, &999, bold);
+    sethl!(TSAttribute, &108, &999);
+    sethl!(TSConstructor, &186, &999);
+    sethl!(TSType, &120, &999);
+    sethl!(TSTypeBuiltin, &166, &199);
+    sethl!(TSConditional, &99, &999);
+    sethl!(TSException, &152, &999);
+    sethl!(TSInclude, &17, &999);
+    sethl!(TSKeywordReturn, &153, &999, bold);
+    sethl!(TSKeyword, &38, &999);
+    sethl!(TSKeywordFunction, &186, &999);
+    sethl!(TSLabel, &246, &999, bold);
+    sethl!(TSNamespace, &59, &999, bold);
+    sethl!(TSRepeat, &55, &999);
+    sethl!(TSConstant, &73, &999);
+    sethl!(TSNumber, &105, &999);
+    sethl!(TSBoolean, &164, &999);
+    sethl!(TSFloat, &105, &999);
+    sethl!(TSConstBuiltin, &15, &999);
+    sethl!(TSCharacter, &60, &999, bold);
+    sethl!(TSError, &15, &4, bold);
+    sethl!(TSFunction, &186, &999);
+    sethl!(TSFuncBuiltin, &190, &999, bold);
+    sethl!(TSMethod, &210, &999);
+    sethl!(TSConstMacro, &196, &999, bold);
+    sethl!(TSFuncMacro, &196, &999);
+    sethl!(TSVariable, &73, &999);
+    sethl!(TSVariableBuiltin, &85, &999, bold);
+    sethl!(TSProperty, &148, &999);
+    sethl!(TSField, &255, &999);
+    sethl!(TSParameter, &245, &999);
+    sethl!(TSParameterReference, &157, &999);
+    sethl!(TSSymbol, &207, &99);
+    sethl!(TSText, &252, &999);
+    sethl!(TSOperator, &252, &999, bold);
+    sethl!(TSPunctDelimiter, &252, &999);
+    sethl!(TSTagDelimiter, &252, &999);
+    sethl!(TSTagAttribute, &166, &999);
+    sethl!(TSPunctBracket, &252, &999);
+    sethl!(TSPunctSpecial, &55, &999);
+    sethl!(TSString, &60, &999);
+    sethl!(TSStringRegex, &15, &999);
+    sethl!(TSStringEscape, &227, &999);
+    sethl!(TSTag, &206, &999);
+    sethl!(TSTitle, &202, &999, bold);
+    sethl!(TSLiteral, &160, &999);
+    sethl!(TSURI, &160, &999, bold);
+    sethl!(TSKeywordOperator, &255, &999);
+    sethl!(Structure, &36, &999);
+    sethl!(TSStrong, &99, &999, bold);
+    sethl!(TSQueryLinterError, &154, &999);
+    sethl!(TreesitterContext, &999, &136);
+
     Ok(())
 }

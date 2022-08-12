@@ -54,7 +54,7 @@ pub fn get_colors() -> HashMap<i32, String> {
         let hex_code = encode_hex(
             (r * 255.0) as u8,
             (g * 255.0) as u8,
-            (b * 255.) as u8,
+            (b * 255.0) as u8,
         );
         color_number = color_number + 1;
         return (color_number, hex_code);
