@@ -75,7 +75,7 @@ fn reactor() -> oxi::Result<Dictionary> {
     sethl!(Pmenu, &248, &234);
     sethl!(PmenuSel, &0, &73, bold);
     sethl!(WildMenu, &0, &73);
-    sethl!(CursorLineNr, &251, &1, bold);
+    sethl!(CursorLineNr, &164, &3, bold);
     sethl!(Comment, &120, &999);
     sethl!(Folded, &68, &234);
     sethl!(FoldColumn, &68, &234);
