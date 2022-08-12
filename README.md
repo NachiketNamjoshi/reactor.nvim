@@ -48,3 +48,7 @@ lualine.setup {
 	options = lualine_opts
 }
 ```
+
+# Credits
+- [oxocarbon.nvim](https://github.com/shaunsingh/oxocarbon.nvim)
+- [nvim-oxi](https://github.com/noib3/nvim-oxi)
