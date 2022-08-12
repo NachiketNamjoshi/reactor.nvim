@@ -90,9 +90,9 @@ fn reactor() -> oxi::Result<Dictionary> {
     sethl!(Visual, &999, &136);
     sethl!(VisualNOS, &999, &136);
     sethl!(WarningMsg, &1, &0, bold);
-    sethl!(DiffAdd, &234, &10);
-    sethl!(DiffChange, &234, &11, underline);
-    sethl!(DiffDelete, &234, &125);
+    sethl!(DiffAdd, &170, &10, bold);
+    sethl!(DiffChange, &188, &11, underline);
+    sethl!(DiffDelete, &150, &125, bold);
     sethl!(QuickFixLine, &255, &73);
     sethl!(PmenuSbar, &999, &234);
     sethl!(PmenuThumb, &999, &242);
