@@ -89,7 +89,7 @@ fn reactor() -> oxi::Result<Dictionary> {
     sethl!(NormalFloat, &999, &1);
     sethl!(Visual, &999, &136);
     sethl!(VisualNOS, &999, &136);
-    sethl!(WarningMsg, &1, &0, bold);
+    sethl!(WarningMsg, &17, &0, bold);
     sethl!(DiffAdd, &170, &10, bold);
     sethl!(DiffChange, &188, &11, underline);
     sethl!(DiffDelete, &150, &125, bold);
@@ -109,14 +109,14 @@ fn reactor() -> oxi::Result<Dictionary> {
     sethl!(Directory, &4, &999);
     sethl!(SpecialKey, &4, &999, bold);
     sethl!(Title, &202, &999, bold);
-    sethl!(ErrorMsg, &1, &0, bold);
+    sethl!(ErrorMsg, &17, &3, bold);
     sethl!(Search, &250, &60, bold);
     sethl!(IncSearch, &0, &236, bold);
-    sethl!(Substitute, &208, &236, underline);
+    sethl!(Substitute, &208, &3, underline);
     sethl!(MoreMsg, &173, &999);
     sethl!(Question, &173, &999);
     sethl!(EndOfBuffer, &999, &0);
-    sethl!(NonText, &999, &0);
+    sethl!(NonText, &58, &119);
     sethl!(Variable, &73, &999);
     sethl!(String, &60, &999);
     sethl!(Character, &60, &999, bold);
@@ -154,7 +154,6 @@ fn reactor() -> oxi::Result<Dictionary> {
     sethl!(TabLine, &250, &2);
     sethl!(TabLineSel, &250, &2, bold);
     sethl!(TabLineFill, &249, &2);
-
 
     // TreeSitter
     sethl!(TSComment, &120, &999);
