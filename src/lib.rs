@@ -89,7 +89,7 @@ fn reactor() -> oxi::Result<Dictionary> {
     sethl!(NormalFloat, &999, &1);
     sethl!(Visual, &999, &136);
     sethl!(VisualNOS, &999, &136);
-    sethl!(WarningMsg, &17, &0, bold);
+    sethl!(WarningMsg, &157, &3, bold);
     sethl!(DiffAdd, &170, &10, bold);
     sethl!(DiffChange, &188, &11, underline);
     sethl!(DiffDelete, &150, &125, bold);
