@@ -72,8 +72,8 @@ fn reactor() -> oxi::Result<Dictionary> {
     sethl!(SpellLocal, &59, &999, underline);
     sethl!(SpellRare, &85, &999, underline);
     sethl!(NormalNC, &255, &0);
-    sethl!(Pmenu, &248, &234);
-    sethl!(PmenuSel, &0, &73, bold);
+    sethl!(Pmenu, &248, &138);
+    sethl!(PmenuSel, &167, &9, bold);
     sethl!(WildMenu, &0, &73);
     sethl!(CursorLineNr, &164, &3, bold);
     sethl!(Comment, &120, &999);
