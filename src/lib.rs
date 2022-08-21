@@ -94,8 +94,8 @@ fn reactor() -> oxi::Result<Dictionary> {
     sethl!(DiffChange, &188, &11, underline);
     sethl!(DiffDelete, &150, &125, bold);
     sethl!(QuickFixLine, &255, &73);
-    sethl!(PmenuSbar, &999, &234);
-    sethl!(PmenuThumb, &999, &242);
+    sethl!(PmenuSbar, &999, &137);
+    sethl!(PmenuThumb, &999, &1);
     sethl!(MatchWord, &999, &999, underline);
     sethl!(MatchParen, &70, &0, underline);
     sethl!(MatchWordCur, &249, &1, underline);
