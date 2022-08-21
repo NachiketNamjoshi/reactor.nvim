@@ -106,8 +106,8 @@ fn reactor() -> oxi::Result<Dictionary> {
     sethl!(TermCursor, &253, &1);
     sethl!(TermCursorNC, &253, &1);
     sethl!(Conceal, &68, &0);
-    sethl!(Directory, &4, &999);
-    sethl!(SpecialKey, &4, &999, bold);
+    sethl!(Directory, &159, &999, bold);
+    sethl!(SpecialKey, &36, &4, bold);
     sethl!(Title, &202, &999, bold);
     sethl!(ErrorMsg, &17, &3, bold);
     sethl!(Search, &250, &60, bold);
