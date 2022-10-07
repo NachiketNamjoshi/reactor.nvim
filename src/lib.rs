@@ -1,7 +1,8 @@
 use std::collections::HashMap;
 pub mod colors;
 
-use nvim_oxi::{self as oxi, api, Dictionary, Function, Object, opts::*};
+use nvim_oxi::api::{self, opts::*};
+use nvim_oxi::{self as oxi, Dictionary, Function, Object};
 
 #[oxi::module]
 fn reactor() -> oxi::Result<Dictionary> {
@@ -13,25 +14,21 @@ fn reactor() -> oxi::Result<Dictionary> {
             api::set_hl(
                 0,
                 stringify!($hlname),
-                Some(
-                    &SetHighlightOpts::builder()
-                        .fg(reactor.get($fgcol).unwrap())
-                        .bg(reactor.get($bgcol).unwrap())
+                &SetHighlightOpts::builder()
+                        .foreground(reactor.get($fgcol).unwrap())
+                        .background(reactor.get($bgcol).unwrap())
                         .build(),
-                ),
             )?;
         };
         ($hlname: expr, $fgcol: expr, $bgcol: expr, $key: ident) => {
             api::set_hl(
                 0,
                 stringify!($hlname),
-                Some(
-                    &SetHighlightOpts::builder()
-                        .fg(reactor.get($fgcol).unwrap())
-                        .bg(reactor.get($bgcol).unwrap())
-                        .$key(true)
-                        .build(),
-                ),
+                &SetHighlightOpts::builder()
+                    .foreground(reactor.get($fgcol).unwrap())
+                    .background(reactor.get($bgcol).unwrap())
+                    .$key(true)
+                    .build(),
             )?;
         };
     }
